@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2</title>
+</head>
+
+<body>
+  <script>
+    "use strict";
+
+    let money = +prompt("Введите сумму, которую хотите положить на счет:");
+
+    if (money) {
+      let moneyString = String(money);
+      let lastDigit = moneyString.substr(moneyString.length - 1);
+      let roublesWord = '';
+
+      switch (lastDigit) {
+        case "0":
+        case "5":
+        case "6":
+        case "7":
+        case "8":
+        case "9":
+          roublesWord = 'рублей';
+          break;
+        case "1":
+          roublesWord = 'рубль';
+          break;
+        case "2":
+        case "3":
+        case "4":
+          roublesWord = 'рубля';
+          break;
+      }
+
+      alert(`Ваша сумма в ${moneyString} ${roublesWord} успешно зачислена.`);
+    } else {
+      alert('Вы ввели не число!');
+    }
+
+  </script>
+</body>
+
+</html>

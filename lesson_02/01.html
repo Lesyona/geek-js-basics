@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2</title>
+</head>
+
+<body>
+  <script>
+    "use strict";
+
+    //пример 1 
+    let a = 1, b = 1, c, d;
+    // Префиксная запись: сначала а увеличилось на 1, потом присвоилось в с, итого с = 2, а = 2
+    c = ++a;
+    alert(c); // ответ: 2 
+
+    //пример 2 
+    d = b++;
+    // Постфиксная запись: сначала b, равное 1, присвоилось в d, потом b увеличилось на 1. Итого b = 2 на этом шаге
+    alert(d); //ответ: 1 
+
+    //пример 3 
+    // В с кладется 2 + а (а оно у нас сейчас = 2), увеличенное на 1, то есть а = 3, с = 5
+    c = 2 + ++a;
+    alert(c); //ответ: 5 
+
+    //пример 4 
+    // b все еще 2, т.к. запись постфиксная, + 2 = 4, положилось в d. b после этого увеличилось на 1, т.е. b = 3
+    d = 2 + b++;
+    alert(d); //ответ: 4 
+
+    alert(a); //3 
+    alert(b); //3
+  </script>
+</body>
+
+</html>
